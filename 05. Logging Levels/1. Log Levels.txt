@@ -1,0 +1,21 @@
+Log levels
+
+    1. ERROR - Error messages
+    2. QUIET - Important information messages
+    3. WARNING - Warning messages
+    4. LIFECYCLE - Progress information messages
+    5. INFO - Information messages
+    6. DEBUG - Debug messages
+
+
+Choosing a log level
+
+    Option 	             Outputs Log Levels
+
+    no logging options   LIFECYCLE and higher
+    -q or --quiet        QUIET and higher
+    -w or --warn         WARN and higher
+    -i or --info         INFO and higher
+    -d or --debug        DEBUG and higher (that is, all log messages)
+
+Reference: https://docs.gradle.org/current/userguide/logging.html

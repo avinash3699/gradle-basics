@@ -1,0 +1,54 @@
+task printGreeting{
+    description "This is my first task"
+    group "Print" 
+
+    doLast{
+        println "Helloooo"
+    }
+
+    doFirst{
+        println "Greetings!"
+    }
+}
+
+task printName
+printName.description = "This is my second task"
+printName.group = "Print"
+printName.doFirst { println "My name is going to be printed" }
+printName.doLast { println "Avinash" }
+
+// To view all the tasks, execute the below command:
+// gradle tasks --all
+
+/* Output
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project '02. Task Configuration'.
+dependencies - Displays all dependencies declared in root project '02. Task Configuration'.
+dependencyInsight - Displays the insight into a specific dependency in root project '02. Task Configuration'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+outgoingVariants - Displays the outgoing variants of root project '02. Task Configuration'.
+projects - Displays the sub-projects of root project '02. Task Configuration'.
+properties - Displays the properties of root project '02. Task Configuration'.
+resolvableConfigurations - Displays the configurations that can be resolved in root project '02. Task Configuration'.
+tasks - Displays the tasks runnable from root project '02. Task Configuration'.
+
+Print tasks
+-----------
+printGreeting - This is my first task
+printName - This is my second task
+
+Other tasks
+-----------
+components - Displays the components produced by root project '02. Task Configuration'. [deprecated]
+dependentComponents - Displays the dependent components of components in root project '02. Task Configuration'. [deprecated]
+model - Displays the configuration model of root project '02. Task Configuration'. [deprecated]
+prepareKotlinBuildScriptModel
+*/

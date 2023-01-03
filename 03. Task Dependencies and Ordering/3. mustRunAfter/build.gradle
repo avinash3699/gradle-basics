@@ -1,0 +1,32 @@
+task zip{
+    doLast{
+        println "Zipping..."
+    }
+}
+
+task compile{
+    doLast{
+        println "Compiling code..."
+    }
+}
+
+zip.mustRunAfter compile
+
+/* Without mustRunAfter (line 13)
+
+Command: gradle -q zip compile
+
+Output:
+Zipping...
+Compiling code...
+*/
+
+
+/* With mustRunAfter (line 13)
+
+Command: gradle -q zip compile
+
+Output:
+Compiling code...
+Zipping...
+*/

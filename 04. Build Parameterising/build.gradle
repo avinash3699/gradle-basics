@@ -1,0 +1,9 @@
+task printGreetings{
+    doLast{
+        println greeting
+    }
+}
+
+ext{
+    greeting = "Hello from inside the \"build script\""
+}

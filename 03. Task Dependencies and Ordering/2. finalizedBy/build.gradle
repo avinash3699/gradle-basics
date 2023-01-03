@@ -1,0 +1,21 @@
+task process{
+    finalizedBy "printConfirmation"
+    doLast{
+        println "Processing..."
+    }
+}
+
+task printConfirmation{
+    doLast{
+        println "Processed Successfully"
+    }
+}
+
+// Command: gradle process -q
+
+/* Output
+
+Processing...
+Processed Successfully
+
+*/

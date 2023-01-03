@@ -1,0 +1,16 @@
+Parameterizing Build
+
+Three Ways
+
+    1. Gradle CLI
+        gradle printGreeting -Pgreeting="Hello from command line"
+
+    2. gradle.properties file
+        greeting = "Hello from gradle.properties file"
+    
+    3. Environment variables
+        ext{
+            greeting = "Hello from inside the \"build script\""
+        }
+        
+        This shadows all other definitions like "CLI" and "gradle.properties"

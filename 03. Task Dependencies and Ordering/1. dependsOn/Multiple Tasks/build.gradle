@@ -1,0 +1,43 @@
+task compile{
+    doLast{
+        println "Compiling..."
+    }
+}
+
+task addResources{
+    doLast{
+        println "Adding resources..."
+    }
+}
+
+task addLibraries{
+    doLast{
+        println "Adding libraries..."
+    }
+}
+
+task zip{
+    doLast{
+        println "Zipping..."
+    }
+}
+
+addLibraries.mustRunAfter "compile"
+addResources.mustRunAfter "addLibraries"
+zip.mustRunAfter "addResources"
+
+task build{
+    dependsOn = ["compile", "addResources", "addLibraries", "zip"]
+}
+
+/*
+Command: gradle build -q
+
+Output: 
+
+Compiling...
+Adding libraries...
+Adding resources...
+Zipping...
+
+*/

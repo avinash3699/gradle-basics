@@ -1,0 +1,13 @@
+task printGreeting{
+    doLast{
+        println "Helloooo"
+    }
+}
+
+/*
+Command: gradle printGreeting -q
+
+Output:
+
+Helloooo
+*/

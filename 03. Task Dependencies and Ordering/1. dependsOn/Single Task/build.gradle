@@ -1,0 +1,21 @@
+task compileCode{
+    doLast{
+        println "Compiling code..."
+    }
+}
+
+task runCode{
+    dependsOn "compileCode"
+    doLast{
+        println "Running code..."
+    }
+}
+
+// Command: gradle run -q
+
+/* Output
+
+Compiling code...
+Running code...
+
+*/
